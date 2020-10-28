@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
-{% block title %} Home {% endblock %} 
+{% block title %} Home {% endblock %}
+
 {% block content %}
-{% for a in theme %}
-    {{a}}
-{% endfor %}
+    <a href="{{url_for('movies_page')}}">Movies</a>
+    <div class="columns is-full">
+        {% for card in range(cards) %}
+        <div class="column">
+            {{card}}
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}

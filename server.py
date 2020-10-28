@@ -1,16 +1,27 @@
 from flask import Flask, render_template
-from datetime import datetime
+import view
 
-app = Flask(__name__)
+from database import Database
+from movies import Movie
 
 
-@app.route('/')
-def home_page():
-    burak = [1,2,3,6,7]
-    today = datetime.today()
-    day_name = today.strftime("%A")
-    return render_template("home.html", day=day_name, theme=burak)
+def create_app():
+    app = Flask(__name__)
+    app.add_url_rule("/",view_func=view.home_page)
+    app.add_url_rule("/movies", view_func=view.movies_page)
+    app.add_url_rule("/movies/<int:movie_key>", view_func=view.movie_page)
+    db = Database()
+    db.add_movie(Movie("Slaughterhouse-Five", year=1972))
+    db.add_movie(Movie("The Shining"))
+    app.config["db"] = db
+    app.config['templates_auto_reload'] = True
+
+
+    app.config.from_object("settings")
+    return app
+
 
 
 if __name__ == "__main__":
-    app.run(host="localhost", port=8080, debug=True)
+    app = create_app()
+    app.run(host="localhost", port=8000)
