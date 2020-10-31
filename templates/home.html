@@ -2,7 +2,9 @@
 {% block title %} Home {% endblock %}
 
 {% block content %}
-    <a href="{{url_for('movies_page')}}">Movies</a>
-    <a href="{{url_for('auth_page', types='student')}}">Student Registration</a>
-    <a href="{{url_for('auth_page', types='admin')}}">Admin Registration</a>
+    <ul class="list">
+        <li><a href="{{url_for('movies_page')}}">Movies</a></li>
+        <li><a href="{{url_for('auth_page', types='student')}}">Student Registration</a></li>
+        <li><a href="{{url_for('auth_page', types='admin')}}">Admin Registration</a></li>
+    </ul>
 {% endblock %}

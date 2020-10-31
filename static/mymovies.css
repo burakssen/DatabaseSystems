@@ -15,7 +15,7 @@ h1 {
   left: 50%;
 }
 
-.box {
+.block {
   text-align: center;
 }
 .auth-student {
@@ -23,12 +23,15 @@ h1 {
   padding-bottom: 50px;
 }
 
-.button {
-  position: relative;
-  transform: translate(-100%, 0%);
-  left: 100%;
+.auth-admin {
+  padding: 30px;
+  padding-bottom: 50px;
 }
 
-.tab-flex {
-  width: 170px;
+.button {
+  width: 100%;
+}
+
+.empty-space {
+  padding: 5px;
 }

@@ -13,7 +13,7 @@
 {% endif %}
 
     <div class="auth">
-        <div class="box is-rounded">
+        <div class="block is-raised">
             <figure class="image is-64x64 align-center">
                 <img src="/static/Logo.png">
             </figure>
@@ -22,14 +22,16 @@
         </div>
         <div class="auth-{{type}}">
             <div class="tabs is-boxed tab-flex">
-                <li class="{{activeStudent}}"><a href="{{url_for('auth_page', types = student)}}/student">Student</a></li>
-                <li class="{{activeAdmin}}"><a href="{{url_for('auth_page', types = admin)}}/admin">Admin</a></li>
+                <li class="{{activeStudent}}" style="width:100px;"><a href="{{url_for('auth_page', types = student)}}/student">Student</a></li>
+                <li class="{{activeAdmin}}" style="width:100px;"><a href="{{url_for('auth_page', types = admin)}}/admin">Admin</a></li>
+                <li><a href="#"> Contact Us </a></li>
             </div>
-            
             <input class="input is-rounded is-medium" type="text" placeholder="{{type.capitalize()}} Id">
-            <br><br>
+            <div class="empty-space"></div>
             <input class="input is-rounded is-medium" type="password" placeholder="Password">
-            <br><br>
+            <div class="empty-space"></div>
+            <a style="position:relative; left: 10%;" href="#">Forget Password ?</a>
+            <div class="empty-space"></div>
             <button class="button is-link is-rounded">Enter</button>
         </div>
     </div>
