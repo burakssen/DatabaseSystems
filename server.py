@@ -10,6 +10,7 @@ def create_app():
     app.add_url_rule("/",view_func=view.home_page)
     app.add_url_rule("/movies", view_func=view.movies_page)
     app.add_url_rule("/movies/<int:movie_key>", view_func=view.movie_page)
+    app.add_url_rule("/auth/<string:types>",view_func=view.auth_page)
     db = Database()
     db.add_movie(Movie("Slaughterhouse-Five", year=1972))
     db.add_movie(Movie("The Shining"))

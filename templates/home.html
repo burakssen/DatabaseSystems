@@ -3,11 +3,6 @@
 
 {% block content %}
     <a href="{{url_for('movies_page')}}">Movies</a>
-    <div class="columns is-full">
-        {% for card in range(cards) %}
-        <div class="column">
-            {{card}}
-        </div>
-        {% endfor %}
-    </div>
+    <a href="{{url_for('auth_page', types='student')}}">Student Registration</a>
+    <a href="{{url_for('auth_page', types='admin')}}">Admin Registration</a>
 {% endblock %}

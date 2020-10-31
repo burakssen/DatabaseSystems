@@ -1,15 +1,36 @@
-h1{
-    color:red;
+h1 {
+  color: red;
 }
 
-.card{
-    text-align: center;
-    width: 100px;
-    border: 1px solid red;
-    border-radius: 100px;
+.card {
+  width: 250px;
 }
 
-.cards{
-    display: flex;
-    justify-content: space-around;
+.cards {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.auth-pos {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.auth-student {
+  padding: 30px;
+  padding-bottom: 50px;
+  border: 1px solid green;
+  border-radius: 20px;
+}
+
+.button {
+  position: relative;
+  transform: translate(-100%, 0%);
+  left: 100%;
+}
+
+.tab-flex {
+  width: 170px;
 }

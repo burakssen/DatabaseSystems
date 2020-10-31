@@ -22,3 +22,9 @@ def movie_page(movie_key):
     if movie is None:
         abort(404)
     return render_template("movie.html", movie=movie)
+
+def auth_page(types):
+    print(types != "admin")
+    if types != "student" and types != "admin":
+        abort(404)
+    return render_template("authentication.html", type=types)
