@@ -2,27 +2,25 @@ h1 {
   color: red;
 }
 
-.card {
-  width: 250px;
-}
-
-.cards {
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.auth-pos {
+.auth {
+  width: 30%;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
 }
 
+.align-center {
+  transform: translate(-50%, 0%);
+  left: 50%;
+}
+
+.box {
+  text-align: center;
+}
 .auth-student {
   padding: 30px;
   padding-bottom: 50px;
-  border: 1px solid green;
-  border-radius: 20px;
 }
 
 .button {
