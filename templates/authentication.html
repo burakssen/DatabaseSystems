@@ -3,12 +3,12 @@
 {% block content %}
 
 {% if 'student' == type %}
-{% set activeStudent = 'is-active' %}
+{% set activeStudent = 'is-active active' %}
 {% set activeAtudent = '' %}
 {% endif %}
 
 {% if "admin" == type %}
-{% set activeAdmin = 'is-active' %}
+{% set activeAdmin = 'is-active active' %}
 {% set activeStudent = '' %}
 {% endif %}
 
@@ -21,9 +21,9 @@
             <p>Welcome to {{type.capitalize()}} Authentication Page</p>
         </div>
         <div class="auth-{{type}}">
-            <div class="tabs is-boxed tab-flex">
-                <li class="{{activeStudent}}" style="width:100px;"><a href="{{url_for('auth_page', types = student)}}/student">Student</a></li>
-                <li class="{{activeAdmin}}" style="width:100px;"><a href="{{url_for('auth_page', types = admin)}}/admin">Admin</a></li>
+            <div class="tabs is-boxed tab-padding">
+                <li class="{{activeStudent}}"><a href="{{url_for('auth_page', types = student)}}/student">Student</a></li>
+                <li class="{{activeAdmin}}"><a href="{{url_for('auth_page', types = admin)}}/admin">Admin</a></li>
                 <li><a href="#"> Contact Us </a></li>
             </div>
             <input class="input is-rounded is-medium" type="text" placeholder="{{type.capitalize()}} Id">

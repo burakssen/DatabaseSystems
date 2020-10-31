@@ -35,3 +35,21 @@ h1 {
 .empty-space {
   padding: 5px;
 }
+
+.active {
+  width: 100px;
+}
+
+.tab-padding {
+  padding: 5px;
+}
+
+@media (max-width: 768px) {
+  .auth {
+    width: 70%;
+  }
+
+  .active {
+    width: 70px;
+  }
+}
